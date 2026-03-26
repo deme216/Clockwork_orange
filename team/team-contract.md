@@ -83,29 +83,34 @@ workload.
 
 ## Decision-Making Rules
 
+Decision-Making Rules
 When the team disagrees, we resolve it as follows:
 
-**For technical decisions** (tech stack, architecture, library choices):
+For technical decisions (tech stack, architecture, library choices):
 
-- [ ] Tech Lead decides after team discussion
-  -✅ Majority vote
-- [ ] Full consensus required
-- [ ] Other: ___________________________
+[x] Majority vote (Tech Lead decides after team discussion)
 
-**For product decisions** (problem scope, features, design):
+[ ] Full consensus required
 
-- [ ] Discovery Lead decides after team discussion
-  
-  ✅ Majority vote
-- [ ] Full consensus required
-- [ ] Other: ___________________________
+[ ] Other: ___________________________
 
-**For process decisions** (deadlines, workload distribution, meeting times):
+For product decisions (problem scope, features, design):
 
-- [ ] Program Lead decides after team discussion
-  ✅ Majority vote
-- [ ] Full consensus required
-- [ ] Other: ___________________________
+[x] Majority vote
+
+[ ] Discovery Lead decides after team discussion
+
+[ ] Full consensus required
+
+[ ] Other: ___________________________
+
+For process decisions (deadlines, workload distribution, meeting times):
+
+[x] Majority vote (Program Lead decides after team discussion)
+
+[ ] Full consensus required
+
+[ ] Other: ___________________________
 
 **Escalation:** If a disagreement cannot be resolved within the team after 4 attempts, we will bring it to the
 instructor during office hours.
