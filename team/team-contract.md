@@ -169,12 +169,12 @@ By signing below, I agree to the terms of this team contract. I understand that 
 influenced by adherence to this contract and that the instructor may reference this document when evaluating individual
 contributions.
 
-| Name | GitHub Username | Signature (type your name) | Date |
-|------|-----------------|----------------------------|------|
-| deme |   deme216       |     Demetre Mikeladze      |      |
-| saba |   saba003       |     Saba Morchilashvili    |      |
-|elguja|                 |     Elguja Tsitaishvili    |      |
-|      |                 |                            |      |
+| Name | GitHub Username | Signature (type your name) | Date          |
+|------|-----------------|----------------------------|---------------|
+| deme |   deme216       |     Demetre Mikeladze      |  26.03.2026   |
+| saba |   saba003       |     Saba Morchilashvili    |  26.03.2026   |
+|elguja|                 |     Elguja Tsitaishvili    |  26.03.2026   |
+|      |                 |                            |               |
 
 ---
 
