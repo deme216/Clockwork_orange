@@ -31,7 +31,7 @@ workload.
 
 **Accountable for:** Deadlines, submissions, team health, conflict resolution tiebreaker
 
-**Assigned to:** ___________________________
+**Assigned to:** Elguja Tsitaishvili
 
 **What this means in practice:**
 
@@ -44,7 +44,7 @@ workload.
 
 **Accountable for:** Problem definition quality, user research, customer insight depth
 
-**Assigned to:** ___________________________
+**Assigned to:** Demetre Mikeladze
 
 **What this means in practice:**
 
@@ -57,7 +57,7 @@ workload.
 
 **Accountable for:** Repository integrity, code quality, architecture decisions, deployment
 
-**Assigned to:** ___________________________
+**Assigned to:** Saba Morchilashvili
 
 **What this means in practice:**
 
@@ -66,24 +66,18 @@ workload.
 - You ensure the README and setup instructions work for anyone cloning the repo
 - You own the CI/CD pipeline and deployment (when we get there)
 
-### Fourth Member Role (if applicable)
-
-**Doubling on:** ___________________________
-
-**Assigned to:** ___________________________
-
 ---
 
 ## Communication Norms
 
 | Question                                                                                 | Our Agreement |
 |------------------------------------------------------------------------------------------|---------------|
-| **Primary communication tool** (e.g., Telegram, WhatsApp, Discord, Slack)                |               |
-| **Expected response time** during weekdays                                               |               |
-| **Expected response time** on weekends                                                   |               |
-| **When is a message "blocking"?** (What counts as urgent enough to expect a fast reply?) |               |
-| **Weekly team meeting** day and time                                                     |               |
-| **Meeting format** (in-person, online, or hybrid)                                        |               |
+| **Primary communication tool** (e.g., Telegram, WhatsApp, Discord, Slack)                |   Discord     |
+| **Expected response time** during weekdays                                               |   10-30 minute|
+| **Expected response time** on weekends                                                   |   1/2-1 hour  |
+| **When is a message "blocking"?** (What counts as urgent enough to expect a fast reply?) |   late for meeting  |
+| **Weekly team meeting** day and time                                                     |   Thursday 9:30           |
+| **Meeting format** (in-person, online, or hybrid)                                        |   Online    |
 
 ---
 
