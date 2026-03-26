@@ -88,7 +88,7 @@ When the team disagrees, we resolve it as follows:
 **For technical decisions** (tech stack, architecture, library choices):
 
 - [ ] Tech Lead decides after team discussion
- ✅ Majority vote
+-✅ Majority vote
 - [ ] Full consensus required
 - [ ] Other: ___________________________
 
