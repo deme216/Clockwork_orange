@@ -88,29 +88,29 @@ When the team disagrees, we resolve it as follows:
 
 For technical decisions (tech stack, architecture, library choices):
 
-[x] Majority vote (Tech Lead decides after team discussion)
+✅ Majority vote (Tech Lead decides after team discussion)
 
-[ ] Full consensus required
+🔳 Full consensus required
 
-[ ] Other: ___________________________
+🔳 Other: ___________________________
 
 For product decisions (problem scope, features, design):
 
-[x] Majority vote
+✅ Majority vote
 
-[ ] Discovery Lead decides after team discussion
+🔳 Discovery Lead decides after team discussion
 
-[ ] Full consensus required
+🔳 Full consensus required
 
-[ ] Other: ___________________________
+🔳 Other: ___________________________
 
 For process decisions (deadlines, workload distribution, meeting times):
 
-[x] Majority vote (Program Lead decides after team discussion)
+✅ Majority vote (Program Lead decides after team discussion)
 
-[ ] Full consensus required
+🔳 Full consensus required
 
-[ ] Other: ___________________________
+🔳 Other: ___________________________
 
 **Escalation:** If a disagreement cannot be resolved within the team after 4 attempts, we will bring it to the
 instructor during office hours.
