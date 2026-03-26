@@ -16,9 +16,9 @@
 
 | Name                | GitHub Username | Email                          | Role (see below) |
 |---------------------|-----------------|--------------------------------|------------------|
-| Saba Morchilashvili | saba0003        | morchilashvili.saba@kiu.edu.ge |                  |
-| Demetre Mikeladze   | deme216         | mikeladze.demetre@kiu.edu.ge   |                  |
-| Elguja Tsitaishvili |                 | tsitaishvili.elguja@kiu.edu.ge |                  |
+| Saba Morchilashvili | saba0003        | morchilashvili.saba@kiu.edu.ge |  Tech Lead       |
+| Demetre Mikeladze   | deme216         | mikeladze.demetre@kiu.edu.ge   |  Discovery Lead  |
+| Elguja Tsitaishvili |                 | tsitaishvili.elguja@kiu.edu.ge |  Program Lead    |
 
 ---
 
@@ -31,7 +31,7 @@ workload.
 
 **Accountable for:** Deadlines, submissions, team health, conflict resolution tiebreaker
 
-**Assigned to:** ___________________________
+**Assigned to:** Elguja Tsitaishvili
 
 **What this means in practice:**
 
@@ -44,7 +44,7 @@ workload.
 
 **Accountable for:** Problem definition quality, user research, customer insight depth
 
-**Assigned to:** ___________________________
+**Assigned to:** Demetre Mikeladze
 
 **What this means in practice:**
 
@@ -57,7 +57,7 @@ workload.
 
 **Accountable for:** Repository integrity, code quality, architecture decisions, deployment
 
-**Assigned to:** ___________________________
+**Assigned to:** Saba Morchilashvili
 
 **What this means in practice:**
 
@@ -66,53 +66,53 @@ workload.
 - You ensure the README and setup instructions work for anyone cloning the repo
 - You own the CI/CD pipeline and deployment (when we get there)
 
-### Fourth Member Role (if applicable)
-
-**Doubling on:** ___________________________
-
-**Assigned to:** ___________________________
-
 ---
 
 ## Communication Norms
 
-| Question                                                                                 | Our Agreement |
-|------------------------------------------------------------------------------------------|---------------|
-| **Primary communication tool** (e.g., Telegram, WhatsApp, Discord, Slack)                |               |
-| **Expected response time** during weekdays                                               |               |
-| **Expected response time** on weekends                                                   |               |
-| **When is a message "blocking"?** (What counts as urgent enough to expect a fast reply?) |               |
-| **Weekly team meeting** day and time                                                     |               |
-| **Meeting format** (in-person, online, or hybrid)                                        |               |
+| Question                                                                                 | Our Agreement       |
+|------------------------------------------------------------------------------------------|---------------------|
+| **Primary communication tool** (e.g., Telegram, WhatsApp, Discord, Slack)                |   Discord           |
+| **Expected response time** during weekdays                                               |   10-30 minute      |
+| **Expected response time** on weekends                                                   |   1/2-1 hour        |
+| **When is a message "blocking"?** (What counts as urgent enough to expect a fast reply?) |   late for meeting  |
+| **Weekly team meeting** day and time                                                     |   Thursday 9:30     |
+| **Meeting format** (in-person, online, or hybrid)                                        |   Online            |
 
 ---
 
 ## Decision-Making Rules
 
+Decision-Making Rules
 When the team disagrees, we resolve it as follows:
 
-**For technical decisions** (tech stack, architecture, library choices):
+For technical decisions (tech stack, architecture, library choices):
 
-- [ ] Tech Lead decides after team discussion
-- [ ] Majority vote
-- [ ] Full consensus required
-- [ ] Other: ___________________________
+✅ Majority vote (Tech Lead decides after team discussion)
 
-**For product decisions** (problem scope, features, design):
+🔳 Full consensus required
 
-- [ ] Discovery Lead decides after team discussion
-- [ ] Majority vote
-- [ ] Full consensus required
-- [ ] Other: ___________________________
+🔳 Other: ___________________________
 
-**For process decisions** (deadlines, workload distribution, meeting times):
+For product decisions (problem scope, features, design):
 
-- [ ] Program Lead decides after team discussion
-- [ ] Majority vote
-- [ ] Full consensus required
-- [ ] Other: ___________________________
+✅ Majority vote
 
-**Escalation:** If a disagreement cannot be resolved within the team after ___ attempts, we will bring it to the
+🔳 Discovery Lead decides after team discussion
+
+🔳 Full consensus required
+
+🔳 Other: ___________________________
+
+For process decisions (deadlines, workload distribution, meeting times):
+
+✅ Majority vote (Program Lead decides after team discussion)
+
+🔳 Full consensus required
+
+🔳 Other: ___________________________
+
+**Escalation:** If a disagreement cannot be resolved within the team after 4 attempts, we will bring it to the
 instructor during office hours.
 
 ---
@@ -124,10 +124,9 @@ We will track individual contributions using:
 - [ ] Git commit history (each member commits their own work)
 - [ ] Weekly standup notes committed to the repo
 - [ ] Shared spreadsheet (link: ___________________________)
-- [ ] Other: ___________________________
+- ✅ Other: Team meeting , we will check live
 
-**Frequency of review:** We will review contributions _________________________ (e.g., every team meeting, every two
-weeks).
+**Frequency of review:** We will review contributions every week.
 
 ---
 
@@ -135,15 +134,15 @@ weeks).
 
 **If a team member misses a deadline:**
 
-1. First occurrence: ___________________________
-2. Second occurrence: ___________________________
-3. Third occurrence: ___________________________
+1. First occurrence: reminder that we need help
+2. Second occurrence: reminder that we need help
+3. Third occurrence: reminder that we need help
 
-**If a team member is unreachable for more than ___ days without explanation:**
-___________________________
+**If a team member is unreachable for more than 7 days without explanation:**
+we reach out if everything is okay and is doing fine
 
 **If a team member consistently under-delivers:**
-___________________________
+we tell him that its not quite enough
 
 ---
 
@@ -170,12 +169,12 @@ By signing below, I agree to the terms of this team contract. I understand that 
 influenced by adherence to this contract and that the instructor may reference this document when evaluating individual
 contributions.
 
-| Name | GitHub Username | Signature (type your name) | Date |
-|------|-----------------|----------------------------|------|
-|      |                 |                            |      |
-|      |                 |                            |      |
-|      |                 |                            |      |
-|      |                 |                            |      |
+| Name | GitHub Username | Signature (type your name) | Date          |
+|------|-----------------|----------------------------|---------------|
+| deme |   deme216       |     Demetre Mikeladze      |  26.03.2026   |
+| saba |   saba003       |     Saba Morchilashvili    |  26.03.2026   |
+|elguja|                 |     Elguja Tsitaishvili    |  26.03.2026   |
+|      |                 |                            |               |
 
 ---
 
