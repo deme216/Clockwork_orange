@@ -71,7 +71,7 @@ It enables a truly "eyes-up" social experience. It allows people to stay connect
 
 ---
 
-## Self-Assessment (Complete Before Committing)
+## Self-Assessment
 
 **Which of your three problems has the most specific WHO?**
 The **H1 (Motorsport)** idea. It targets a very specific hobbyist niche with a technical pain point that is easily defined and measured.
