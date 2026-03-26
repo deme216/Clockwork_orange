@@ -1,66 +1,86 @@
-H1: Hassle
-What process in your daily life is tedious, error-prone, or needlessly manual?
+# Individual Problem Brainstorm
 
-WHO has this problem?
-Amateur track-day motorcyclists or grassroots kart racers who record their sessions via GoPro but struggle to map their physical performance to specific sectors of the track.
+**CS-AI-2025 | Spring 2026 | Lab 1**
 
-PROBLEM in one sentence:
-Riders have to manually scrub through hours of footage to find where they missed a vertex or messed up a gear change, making it nearly impossible to compare "perfect laps" without expensive professional telemetry hardware.
+**Your Name:** [Insert Name]
+**GitHub Username:** [Insert Username]
+**Date:** 19 March 2026
 
-CURRENT SOLUTION:
-They use basic stopwatch apps or manually re-watch videos side-by-side on a laptop, guessing their entry speeds and lean angles by eye.
+---
 
-AI ANGLE:
-Video-based action recognition and spatial tracking. AI can analyze the onboard footage to identify track markers, calculate relative lean angles from the horizon line, and automatically "chapter" the video into specific corners (e.g., "Turn 4 Heat Map").
+## H1: Hassle
 
-WHY IT MATTERS:
-It democratizes professional-level racing coaching. It saves hours of manual video editing and provides concrete data to help riders improve safety and lap times without a $5,000 sensor suite.
+*What process in your daily life is tedious, error-prone, or needlessly manual?*
 
-H2: Hardship
-What problem do you see in your community or country that affects real people?
+**WHO has this problem?**
+Amateur track-day motorcyclists and grassroots kart racers who use action cameras (GoPros) to record their sessions but lack professional data-logging teams to analyze their technique.
 
-WHO has this problem?
-Local wildlife rehabilitators and forest rangers who manage protected areas but lack the staff to monitor vast trail cameras for injured animals or invasive species.
+**PROBLEM in one sentence:**
+Riders must manually scrub through hours of high-definition footage to find specific "apex misses" or braking errors, making it nearly impossible to correlate visual footage with actual lap-time improvement.
 
-PROBLEM in one sentence:
-Valuable ecological data is trapped in thousands of hours of "empty" trail camera footage, leading to slow responses when an endangered animal is injured or a poaching threat is detected.
+**CURRENT SOLUTION:**
+They manually watch videos side-by-side on a laptop, using a handheld stopwatch to estimate sector times and "eyeballing" their lean angles and positioning relative to the curbs.
 
-CURRENT SOLUTION:
-Rangers or volunteers manually swap SD cards and spend weekends clicking through thousands of photos of "moving grass" to find one relevant animal sighting.
+**AI ANGLE:**
+**Video-based action recognition and spatial tracking.** The AI can identify track geometry (kerbs, apex markers) and calculate the vehicle's lean angle and trajectory relative to the horizon line, automatically "tagging" every corner in a 20-minute session for instant review.
 
-AI ANGLE:
-Image captioning and visual question answering (VQA). Multimodal AI can automatically filter out "false positives" (wind/shadows) and tag specific behaviors (e.g., "Limping deer detected" or "Unauthorized vehicle at North Gate"), sending real-time alerts.
+**WHY IT MATTERS:**
+It democratizes professional-level racing telemetry. It saves hours of manual video review and provides concrete, data-driven feedback that helps riders improve their safety and speed without spending thousands on hardware sensors.
 
-WHY IT MATTERS:
-It scales conservation efforts. Faster detection of injured wildlife increases survival rates, and automated logging provides a real-time "database" of local biodiversity that was previously impossible to maintain.
+---
 
-H3: Horizon
-What new capability does multimodal AI unlock that was impossible 2 years ago?
+## H2: Hardship
 
-WHO has this problem?
-Solo hikers or nature enthusiasts who want to document their journeys and share them on social media but find that traditional "vlogging" distracts them from actually experiencing the outdoors.
+*What problem do you see in your community or country that affects real people?*
 
-PROBLEM in one sentence:
-There is a friction between "living the moment" and "documenting the moment," where people miss the beauty of a hike because they are busy labeling photos, recording voice notes, or looking at their screens.
+**WHO has this problem?**
+Local wildlife rehabilitators and forest rangers who manage large protected habitats but have limited staff to monitor hundreds of remote trail cameras.
 
-CURRENT SOLUTION:
-Users take a photo, stop to type a caption or location tag, and then try to organize everything into a cohesive "story" or post later that evening.
+**PROBLEM in one sentence:**
+Valuable ecological data is "trapped" in thousands of hours of empty or redundant footage, leading to delayed responses for injured animals, poaching threats, or the spread of invasive species.
 
-AI ANGLE:
-Multimodal context fusion. Using a combination of image-to-text and audio-to-text, an AI agent can "watch" a hiker’s stream of photos and ambient voice clips to automatically synthesize a narrative-driven social diary, identifying plant species and landmarks without the user ever opening an app.
+**CURRENT SOLUTION:**
+Volunteers manually swap SD cards and spend dozens of hours clicking through photos of wind-blown grass just to find a single relevant sighting of a fox or deer.
 
-WHY IT MATTERS:
-It creates a "hands-free" social application. It allows for a deeper connection with nature while still providing the high-quality, metadata-rich documentation needed for modern social sharing and personal memory-keeping.
+**AI ANGLE:**
+**Image captioning and visual question answering (VQA).** The system can autonomously filter out environmental "noise" and send real-time alerts for specific queries like "Find any animal with a visible limb injury" or "Detect unauthorized human presence after sundown."
 
-Self-Assessment
-Which of your three problems has the most specific WHO?
-The H1 (Motorsport) idea. It identifies a specific niche (amateur track-day riders) with a very clear, measurable pain point.
+**WHY IT MATTERS:**
+It dramatically scales conservation efforts. Faster detection of injured wildlife directly increases survival rates, and automated population logging provides a real-time biodiversity database for environmental policy and protection.
 
-Which has the strongest AI angle?
-The H2 (Wildlife) idea. While H1 is cool, H2 uses AI to do something a human simply cannot do at scale (watch 50 cameras at once), making the AI a functional necessity rather than a luxury.
+---
 
-Which would you fight hardest for if your team had to choose?
-The H1 (Motorsport) project, as it allows for the most interesting technical integration between video processing and data visualization.
+## H3: Horizon
 
-Is there a problem you thought of but discarded? What was it, and why did you drop it?
-I thought about an AI that suggests "the best gym workout," but I dropped it because it’s a saturated market and doesn't feel like a unique problem for a student in 2026.
+*What new capability does multimodal AI unlock that was impossible 2 years ago?*
+
+**WHO has this problem?**
+Solo adventure hikers and nature enthusiasts who want to document their journeys for social applications but find that constant "vlogging" ruins the immersion of being outdoors.
+
+**PROBLEM in one sentence:**
+There is a constant friction between "experiencing the moment" and "documenting the moment," where hikers spend more time labeling photos and typing captions on a screen than looking at the trail.
+
+**CURRENT SOLUTION:**
+Users take photos, stop to type notes or tags, and then spend hours at the end of the day trying to reconstruct the narrative of their hike for a post or digital journal.
+
+**AI ANGLE:**
+**Multimodal context fusion.** By processing a stream of photos and ambient voice memos in real-time, the AI can synthesize a cohesive narrative "diary," identifying specific flora/fauna and geological landmarks without the user ever touching their phone screen.
+
+**WHY IT MATTERS:**
+It enables a truly "eyes-up" social experience. It allows people to stay connected to their community and document their passions while remaining fully present in the natural world.
+
+---
+
+## Self-Assessment (Complete Before Committing)
+
+**Which of your three problems has the most specific WHO?**
+The **H1 (Motorsport)** idea. It targets a very specific hobbyist niche with a technical pain point that is easily defined and measured.
+
+**Which has the strongest AI angle (where AI is truly necessary, not just nice to have)?**
+The **H2 (Wildlife)** idea. AI is a necessity here to handle the massive volume of data that humans physically cannot process in real-time.
+
+**Which would you fight hardest for if your team had to choose?**
+The **H1 (Motorsport)** project. It offers a great balance of computer vision and data visualization that would be highly engaging to build and demo.
+
+**Is there a problem you thought of but discarded? What was it, and why did you drop it?**
+I considered an AI for "automated grocery list sorting," but I dropped it because it felt too generic and didn't utilize the multimodal capabilities or "vision-based" strengths emphasized in the recent lectures.
