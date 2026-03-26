@@ -70,14 +70,14 @@ workload.
 
 ## Communication Norms
 
-| Question                                                                                 | Our Agreement |
-|------------------------------------------------------------------------------------------|---------------|
-| **Primary communication tool** (e.g., Telegram, WhatsApp, Discord, Slack)                |   Discord     |
-| **Expected response time** during weekdays                                               |   10-30 minute|
-| **Expected response time** on weekends                                                   |   1/2-1 hour  |
+| Question                                                                                 | Our Agreement       |
+|------------------------------------------------------------------------------------------|---------------------|
+| **Primary communication tool** (e.g., Telegram, WhatsApp, Discord, Slack)                |   Discord           |
+| **Expected response time** during weekdays                                               |   10-30 minute      |
+| **Expected response time** on weekends                                                   |   1/2-1 hour        |
 | **When is a message "blocking"?** (What counts as urgent enough to expect a fast reply?) |   late for meeting  |
-| **Weekly team meeting** day and time                                                     |   Thursday 9:30           |
-| **Meeting format** (in-person, online, or hybrid)                                        |   Online    |
+| **Weekly team meeting** day and time                                                     |   Thursday 9:30     |
+| **Meeting format** (in-person, online, or hybrid)                                        |   Online            |
 
 ---
 
