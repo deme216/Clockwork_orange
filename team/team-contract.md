@@ -134,15 +134,15 @@ We will track individual contributions using:
 
 **If a team member misses a deadline:**
 
-1. First occurrence: ___________________________
-2. Second occurrence: ___________________________
-3. Third occurrence: ___________________________
+1. First occurrence: reminder that we need help
+2. Second occurrence: reminder that we need help
+3. Third occurrence: reminder that we need help
 
-**If a team member is unreachable for more than ___ days without explanation:**
-___________________________
+**If a team member is unreachable for more than 7 days without explanation:**
+we reach out if everything is okay and is doing fine
 
 **If a team member consistently under-delivers:**
-___________________________
+we tell him that its not quite enough
 
 ---
 
@@ -171,9 +171,9 @@ contributions.
 
 | Name | GitHub Username | Signature (type your name) | Date |
 |------|-----------------|----------------------------|------|
-|      |                 |                            |      |
-|      |                 |                            |      |
-|      |                 |                            |      |
+| deme |   deme216       |     Demetre Mikeladze      |      |
+| saba |   saba003       |     Saba Morchilashvili    |      |
+|elguja|                 |     Elguja Tsitaishvili    |      |
 |      |                 |                            |      |
 
 ---
