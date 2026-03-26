@@ -95,6 +95,7 @@ When the team disagrees, we resolve it as follows:
 **For product decisions** (problem scope, features, design):
 
 - [ ] Discovery Lead decides after team discussion
+  
   ✅ Majority vote
 - [ ] Full consensus required
 - [ ] Other: ___________________________
