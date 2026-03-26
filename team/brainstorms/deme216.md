@@ -2,9 +2,9 @@
 
 **CS-AI-2025 | Spring 2026 | Lab 1**
 
-**Your Name:** [Insert Name]
-**GitHub Username:** [Insert Username]
-**Date:** 19 March 2026
+**Your Name:** [Demetre Mikeladze]
+**GitHub Username:** [deme216]
+**Date:** 26 March 2026
 
 ---
 
