@@ -88,21 +88,21 @@ When the team disagrees, we resolve it as follows:
 **For technical decisions** (tech stack, architecture, library choices):
 
 - [ ] Tech Lead decides after team discussion
-- [ ] Majority vote
+- [✅] Majority vote
 - [ ] Full consensus required
 - [ ] Other: ___________________________
 
 **For product decisions** (problem scope, features, design):
 
 - [ ] Discovery Lead decides after team discussion
-- [ ] Majority vote
+- [✅] Majority vote
 - [ ] Full consensus required
 - [ ] Other: ___________________________
 
 **For process decisions** (deadlines, workload distribution, meeting times):
 
 - [ ] Program Lead decides after team discussion
-- [ ] Majority vote
+- [✅] Majority vote
 - [ ] Full consensus required
 - [ ] Other: ___________________________
 
