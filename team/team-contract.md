@@ -88,25 +88,25 @@ When the team disagrees, we resolve it as follows:
 **For technical decisions** (tech stack, architecture, library choices):
 
 - [ ] Tech Lead decides after team discussion
-- [✅] Majority vote
+- ✅ Majority vote
 - [ ] Full consensus required
 - [ ] Other: ___________________________
 
 **For product decisions** (problem scope, features, design):
 
 - [ ] Discovery Lead decides after team discussion
-- [✅] Majority vote
+- ✅ Majority vote
 - [ ] Full consensus required
 - [ ] Other: ___________________________
 
 **For process decisions** (deadlines, workload distribution, meeting times):
 
 - [ ] Program Lead decides after team discussion
-- [✅] Majority vote
+- ✅ Majority vote
 - [ ] Full consensus required
 - [ ] Other: ___________________________
 
-**Escalation:** If a disagreement cannot be resolved within the team after ___ attempts, we will bring it to the
+**Escalation:** If a disagreement cannot be resolved within the team after 4 attempts, we will bring it to the
 instructor during office hours.
 
 ---
@@ -118,10 +118,9 @@ We will track individual contributions using:
 - [ ] Git commit history (each member commits their own work)
 - [ ] Weekly standup notes committed to the repo
 - [ ] Shared spreadsheet (link: ___________________________)
-- [ ] Other: ___________________________
+- ✅ Other: Team meeting , we will check live
 
-**Frequency of review:** We will review contributions _________________________ (e.g., every team meeting, every two
-weeks).
+**Frequency of review:** We will review contributions every week.
 
 ---
 
