@@ -16,9 +16,9 @@
 
 | Name                | GitHub Username | Email                          | Role (see below) |
 |---------------------|-----------------|--------------------------------|------------------|
-| Saba Morchilashvili | saba0003        | morchilashvili.saba@kiu.edu.ge |                  |
-| Demetre Mikeladze   | deme216         | mikeladze.demetre@kiu.edu.ge   |                  |
-| Elguja Tsitaishvili |                 | tsitaishvili.elguja@kiu.edu.ge |                  |
+| Saba Morchilashvili | saba0003        | morchilashvili.saba@kiu.edu.ge |  Tech Lead       |
+| Demetre Mikeladze   | deme216         | mikeladze.demetre@kiu.edu.ge   |  Discovery Lead  |
+| Elguja Tsitaishvili |                 | tsitaishvili.elguja@kiu.edu.ge |  Program Lead    |
 
 ---
 
