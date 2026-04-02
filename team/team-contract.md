@@ -152,12 +152,12 @@ we tell him that its not quite enough
 
 | Section                               | Primary Owner | Support/Reviewer |
 |---------------------------------------|---------------|------------------|
-| 1. Problem Statement and User Need    |               |                  |
-| 2. Proposed Solution and Key Features |               |                  |
-| 3. Technical Architecture Overview    |               |                  |
-| 4. Timeline and Milestones            |               |                  |
-| 5. Team Roles and Responsibilities    |               |                  |
-| 6. IRB-Light Checklist                |               |                  |
+| 1. Problem Statement and User Need    |  demetre      |     elguja       |
+| 2. Proposed Solution and Key Features |   saba        |     demetre      |
+| 3. Technical Architecture Overview    |   demetre     |     saba         |
+| 4. Timeline and Milestones            |   elguja      |      demetre     |
+| 5. Team Roles and Responsibilities    |   saba        |      demetre     |
+| 6. IRB-Light Checklist                |   elguja      |      saba        |
 
 **Team check-in before Milestone 1 deadline:** _____________ (date and time)
 
