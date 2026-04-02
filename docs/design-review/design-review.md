@@ -113,7 +113,7 @@ ensure consistent color palettes and stroke weights.
 
 ---
 
-## Section 5: Team Roles and Week-by-Week Plan (1.5 pts)
+## Section 5: Team Roles and Week-by-Week Plan
 
 ### 5.1 — Team Roles
 
@@ -148,7 +148,7 @@ during development while still being able to leverage the power of paid models (
 
 ---
 
-## Section 6: IRB-Light Checklist (0.5 pts)
+## Section 6: IRB-Light Checklist
 
 | Question                                        | Answer     | If yes: explain                                                    |
 |-------------------------------------------------|------------|--------------------------------------------------------------------|
