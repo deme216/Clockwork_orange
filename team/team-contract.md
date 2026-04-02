@@ -173,7 +173,7 @@ contributions.
 |------|-----------------|----------------------------|---------------|
 | deme |   deme216       |     Demetre Mikeladze      |  26.03.2026   |
 | saba |   saba003       |     Saba Morchilashvili    |  26.03.2026   |
-|elguja|                 |     Elguja Tsitaishvili    |  26.03.2026   |
+|elguja| eguja-tsitaishvili|     Elguja Tsitaishvili    |  26.03.2026   |
 |      |                 |                            |               |
 
 ---
