@@ -1,182 +1,90 @@
 # Team Contract
 
-**CS-AI-2025 | Spring 2026 | Capstone Project**
+**Course:** CS-AI-2025 Spring 2026 | **Due:** End of Lab 3, 27 March 2026
+
+**Commit as:** `TEAM-CONTRACT.md` in your team repo root
+
+All members must type their full name in the Signatures section before committing.
 
 ---
 
-## Team Information
+## Team Identity
 
-| Field              | Details                                     |
-|--------------------|---------------------------------------------|
-| **Team Name**      | Clockwork Orange                            |
-| **Repository URL** | https://github.com/deme216/Clockwork_orange |
-| **Date Signed**    | 03/20/2026                                  |
+**Team name:** Clockwork Orange
 
-### Team Members
+**Project title:** VectorFlow
 
-| Name                | GitHub Username | Email                          | Role (see below) |
-|---------------------|-----------------|--------------------------------|------------------|
-| Saba Morchilashvili | saba0003        | morchilashvili.saba@kiu.edu.ge |  Tech Lead       |
-| Demetre Mikeladze   | deme216         | mikeladze.demetre@kiu.edu.ge   |  Discovery Lead  |
-| Elguja Tsitaishvili |guja-tsitaishvili| tsitaishvili.elguja@kiu.edu.ge |  Program Lead    |
+**Repo URL:** `github.com/ZA-KIU-Classroom/AI-POWERED-SOFTWARE-DEV-SP26/`
 
----
+### Team members
 
-## Roles and Accountability
-
-Assign one person to each role. On a team of 4, the fourth member doubles up on the role with the heaviest current
-workload.
-
-### Program Lead
-
-**Accountable for:** Deadlines, submissions, team health, conflict resolution tiebreaker
-
-**Assigned to:** Elguja Tsitaishvili
-
-**What this means in practice:**
-
-- You ensure every deliverable is submitted on time
-- You run the weekly team check-in
-- When the team cannot agree, you make the final call (after hearing everyone)
-- You are the primary point of contact with the instructor
-
-### Discovery Lead
-
-**Accountable for:** Problem definition quality, user research, customer insight depth
-
-**Assigned to:** Demetre Mikeladze
-
-**What this means in practice:**
-
-- You own the quality of the problem statement and user research
-- You ensure the team's work traces back to real user needs
-- During the design phase, you advocate for the user perspective
-- You lead the problem convergence discussion in Lab 2
-
-### Tech Lead
-
-**Accountable for:** Repository integrity, code quality, architecture decisions, deployment
-
-**Assigned to:** Saba Morchilashvili
-
-**What this means in practice:**
-
-- You own the main branch. No one merges without your review (or an agreed process).
-- You make the final call on tech stack and architecture disagreements
-- You ensure the README and setup instructions work for anyone cloning the repo
-- You own the CI/CD pipeline and deployment (when we get there)
+| Full name | GitHub username | Primary role |
+|---|---|---|
+| Saba Morchilashvili | saba0003 | AI Pipeline Architect |
+| Demetre Mikeladze | deme216 | Frontend Lead |
+| Elguja Tsitaishvili | guja-tsitaishvili | Data & DevOps |
 
 ---
 
-## Communication Norms
+## Roles
 
-| Question                                                                                 | Our Agreement       |
-|------------------------------------------------------------------------------------------|---------------------|
-| **Primary communication tool** (e.g., Telegram, WhatsApp, Discord, Slack)                |   Discord           |
-| **Expected response time** during weekdays                                               |   10-30 minute      |
-| **Expected response time** on weekends                                                   |   1/2-1 hour        |
-| **When is a message "blocking"?** (What counts as urgent enough to expect a fast reply?) |   late for meeting  |
-| **Weekly team meeting** day and time                                                     |   Thursday 9:30     |
-| **Meeting format** (in-person, online, or hybrid)                                        |   Online            |
-
----
-
-## Decision-Making Rules
-
-Decision-Making Rules
-When the team disagrees, we resolve it as follows:
-
-For technical decisions (tech stack, architecture, library choices):
-
-✅ Majority vote (Tech Lead decides after team discussion)
-
-🔳 Full consensus required
-
-🔳 Other: ___________________________
-
-For product decisions (problem scope, features, design):
-
-✅ Majority vote
-
-🔳 Discovery Lead decides after team discussion
-
-🔳 Full consensus required
-
-🔳 Other: ___________________________
-
-For process decisions (deadlines, workload distribution, meeting times):
-
-✅ Majority vote (Program Lead decides after team discussion)
-
-🔳 Full consensus required
-
-🔳 Other: ___________________________
-
-**Escalation:** If a disagreement cannot be resolved within the team after 4 attempts, we will bring it to the
-instructor during office hours.
+| Area | Owner |
+|---|---|
+| Frontend / UI | Demetre Mikeladze |
+| Backend / API | Saba Morchilashvili |
+| AI integration (prompts, model calls) | Saba Morchilashvili |
+| Database / storage | Elguja Tsitaishvili |
+| DevOps / deployment | Elguja Tsitaishvili |
+| Documentation | Demetre Mikeladze |
+| Testing | Elguja Tsitaishvili |
 
 ---
 
-## Contribution Tracking
+## Working Agreements
 
-We will track individual contributions using:
+**Weekly sync — when and where:**
+Weekly in-person sync during Friday lab sessions (09:00–11:00 or 11:00–13:00 depending on group). Additional async check-ins via the team communication channel as needed.
 
-- [ ] Git commit history (each member commits their own work)
-- [ ] Weekly standup notes committed to the repo
-- [ ] Shared spreadsheet (link: ___________________________)
-- ✅ Other: Team meeting , we will check live
+**Day-to-day communication channel:**
+Microsoft Teams (team group chat).
 
-**Frequency of review:** We will review contributions every week.
+**Code review — how changes get merged:**
+All changes are submitted via pull request on GitHub. At least one other team member must review and approve before merging to `main`. No direct pushes to `main`.
 
----
-
-## Accountability and Consequences
-
-**If a team member misses a deadline:**
-
-1. First occurrence: reminder that we need help
-2. Second occurrence: reminder that we need help
-3. Third occurrence: reminder that we need help
-
-**If a team member is unreachable for more than 7 days without explanation:**
-we reach out if everything is okay and is doing fine
-
-**If a team member consistently under-delivers:**
-we tell him that its not quite enough
+**What counts as done:**
+Code runs without errors, has been reviewed by at least one teammate, is committed with a meaningful message, and any new feature is reflected in the README or relevant documentation.
 
 ---
 
-## Milestone 1 Work Distribution
+## Contribution Logging
 
-*(Leave this section blank for now. You will fill it in during Lab 2 after selecting your team's problem direction.)*
+Each member logs contributions through GitHub commits with meaningful, descriptive commit messages (e.g., "Add SVG validation logic to Artist Agent response parser" not "update file"). If work is done outside of code (design decisions, research, testing), it is logged as a brief note in the pull request description.
 
-| Section                               | Primary Owner | Support/Reviewer |
-|---------------------------------------|---------------|------------------|
-| 1. Problem Statement and User Need    |  demetre      |     elguja       |
-| 2. Proposed Solution and Key Features |   saba        |     demetre      |
-| 3. Technical Architecture Overview    |   demetre     |     saba         |
-| 4. Timeline and Milestones            |   elguja      |      demetre     |
-| 5. Team Roles and Responsibilities    |   saba        |      demetre     |
-| 6. IRB-Light Checklist                |   elguja      |      saba        |
+---
 
-**Team check-in before Milestone 1 deadline:** _____________ (date and time)
+## Conflict Resolution
+
+**Technical disagreements — how you decide:**
+The team discusses the options during the weekly sync. If no consensus after 15 minutes, the team member who owns that area (see Roles table above) makes the final call.
+
+**If a member misses a deadline:**
+The member notifies the team as early as possible. The team redistributes the work for that week and the member takes on equivalent extra work the following week. If a pattern develops (two or more missed deadlines), the team escalates.
+
+**Escalation — if the team cannot resolve internally:**
+Contact the instructor at zeshan.ahmad@kiu.edu.ge.
+
+---
+
+## Academic Integrity
+
+All members confirm: we will not submit AI-generated work without attribution, we will commit with meaningful messages, and we understand the instructor may request an oral defence of any submission.
 
 ---
 
 ## Signatures
 
-By signing below, I agree to the terms of this team contract. I understand that peer assessment scores will be
-influenced by adherence to this contract and that the instructor may reference this document when evaluating individual
-contributions.
+By typing your full name below you confirm you have read this contract and commit to upholding it.
 
-| Name | GitHub Username | Signature (type your name) | Date          |
-|------|-----------------|----------------------------|---------------|
-| deme |   deme216       |     Demetre Mikeladze      |  26.03.2026   |
-| saba |   saba003       |     Saba Morchilashvili    |  26.03.2026   |
-|elguja| eguja-tsitaishvili|     Elguja Tsitaishvili    |  26.03.2026   |
-|      |                 |                            |               |
-
----
-
-*This contract will be reviewed during the midterm peer assessment (Week 9) and the final peer assessment (Week 15). It
-may be updated at any time with the agreement of all team members.*
+- Saba Morchilashvili
+- Demetre Mikeladze
+- Elguja Tsitaishvili
