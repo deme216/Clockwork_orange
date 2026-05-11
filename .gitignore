@@ -1,4 +1,5 @@
 .idea/
 .venv/
 .env
+logs/cost-log.csv
 __pycache__/
