@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from models.request_model import AssetRequest
-from models.response_model import AssetResponse
+from models.request_models import AssetRequest
+from models.response_models import AssetResponse
 from services import llm_service
 
 router = APIRouter()
