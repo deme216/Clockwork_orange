@@ -47,7 +47,7 @@ def _log_to_csv(record: CallRecord):
         writer.writerow(asdict(record))
 
 
-def _clean_svg(text: str) -> str:
+def clean_svg(text: str) -> str:
     """Extracts SVG code and removes backslashes/markdown."""
     match = re.search(r"(<svg.*?</svg>)", text, re.DOTALL)
     if match:
@@ -62,7 +62,7 @@ def run_asset_pipeline(prompt: str, style: str, use_pro: bool) -> dict:
     start_time = time.time()
 
     # 1. Creative Agent
-    creative_brief = _call_ai(
+    creative_brief = call_ai(
         model="google/gemini-3.1-flash-lite",
         system="You are a creative director. Describe a 2D game asset in 50 words.",
         prompt=f"Theme: {style}. Asset: {prompt}"
@@ -70,14 +70,14 @@ def run_asset_pipeline(prompt: str, style: str, use_pro: bool) -> dict:
 
     # 2. Artist Agent
     artist_model = "anthropic/claude-4.6-sonnet" if use_pro else "~google/gemini-flash-latest"
-    raw_svg = _call_ai(
+    raw_svg = call_ai(
         model=artist_model,
         system="You are a vector artist. Output ONLY raw SVG XML. No talk.",
         prompt=creative_brief["content"]
     )
 
     # 3. Clean SVG
-    final_svg = _clean_svg(raw_svg["content"])
+    final_svg = clean_svg(raw_svg["content"])
 
     total_latency = int((time.time() - start_time) * 1000)
     total_cost = creative_brief["cost"] + raw_svg["cost"]
@@ -101,7 +101,7 @@ def run_asset_pipeline(prompt: str, style: str, use_pro: bool) -> dict:
     }
 
 
-def _call_ai(model: str, system: str, prompt: str) -> dict:
+def call_ai(model: str, system: str, prompt: str) -> dict:
     """Internal helper to call OpenRouter and calculate cost."""
     response = _client.chat.completions.create(
         model=model,

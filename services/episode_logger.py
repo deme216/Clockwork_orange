@@ -32,6 +32,11 @@ class Episode:
     latency_ms: int = 0
     success: bool = True
     cost_usd: float = 0.0
+    retry_count: int = 0
+    timeout_ms: int = 8000
+    error_type: str | None = None
+    approval_required: bool = False
+    approved: bool | None = None
 
 
 def log_episode(ep: Episode) -> Episode:
