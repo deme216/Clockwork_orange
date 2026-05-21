@@ -37,6 +37,10 @@ class Episode:
     error_type: str | None = None
     approval_required: bool = False
     approved: bool | None = None
+    cache_read_tokens: int = 0
+    cache_write_tokens: int = 0
+    provider: str = "google"  # or "anthropic"
+    fallback_triggered: bool = False
 
 
 def log_episode(ep: Episode) -> Episode:

@@ -1,8 +1,6 @@
 .idea/
 .venv/
 .env
-logs/cost-log.csv
-logs/episode-log.csv
 __pycache__/
 .pytest_cache/
 *.pyc

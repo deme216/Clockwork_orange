@@ -1,0 +1,3 @@
+{"ts": 1779380727.098789, "tool": "generate_vector_asset", "input_hash": "44136fa355b3", "status": "unauthorized", "latency_ms": 0, "error": null}
+{"ts": 1779380855.8388283, "tool": "generate_vector_asset", "input_hash": "459e059f9260", "status": "error", "latency_ms": 19250, "error": "InternalServerError"}
+{"ts": 1779381183.8554227, "tool": "generate_vector_asset", "input_hash": "459e059f9260", "status": "ok", "latency_ms": 14555, "error": null}

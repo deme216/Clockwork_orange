@@ -1,0 +1,5 @@
+timestamp,prompt_hash,model,cost_usd,latency_ms,cache_read_tokens,cache_write_tokens,fallback_triggered,status
+2026-05-21T17:54:50.320973+00:00,2738835447,google/gemini-2.0-flash-001,0.000466,10574,0,0,False,ok
+2026-05-21T17:54:54.848492+00:00,2738835447,google/gemini-2.0-flash-001,0.000566,4523,0,0,False,ok
+2026-05-21T17:57:19.043250+00:00,2390680575,google/gemini-2.0-flash-001,0.000202,2040,0,0,False,ok
+2026-05-21T17:57:25.072907+00:00,2390680575,google/gemini-2.0-flash-001,0.000202,1022,0,0,False,ok

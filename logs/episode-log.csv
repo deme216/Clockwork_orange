@@ -1,0 +1,15 @@
+timestamp,prompt_hash,model,cost_usd,latency_ms,cache_read_tokens,cache_write_tokens,fallback_triggered,status
+2026-05-21T18:02:46.347297+00:00,-128330222,anthropic/claude-3-haiku,0.000613,2573,0,0,True,ok
+2026-05-21T18:02:59.489664+00:00,-128330222,anthropic/claude-3-haiku,0.000628,2990,0,0,True,ok
+2026-05-21T18:05:11.234162+00:00,4756177227,google/gemini-2.0-flash-001,0.000462,11336,0,0,False,ok
+2026-05-21T18:05:24.455074+00:00,4756177227,google/gemini-2.0-flash-001,0.000462,3210,0,0,False,ok
+eval-session-999,stream_end,ep_af8f7a63b00d,2026-05-21T18:34:06.833989+00:00,google/gemini-3.1-flash-lite,,34,46,2177,True,1.09e-05,0,8000,,False,,0,0,google,False
+eval-session-999,stream_end,ep_5aea986f862a,2026-05-21T18:34:09.131378+00:00,google/gemini-3.1-flash-lite,,35,382,2295,True,7.815000000000002e-05,0,8000,,False,,0,0,google,False
+eval-session-999,stream_end,ep_de0260754489,2026-05-21T18:34:10.907180+00:00,google/gemini-3.1-flash-lite,,30,291,1769,True,5.970000000000001e-05,0,8000,,False,,0,0,google,False
+eval-session-999,stream_end,ep_e2f34c7eb0e6,2026-05-21T18:34:12.874702+00:00,google/gemini-3.1-flash-lite,,34,394,1965,True,8.05e-05,0,8000,,False,,0,0,google,False
+eval-session-999,stream_end,ep_a765869a1521,2026-05-21T18:34:15.362085+00:00,google/gemini-3.1-flash-lite,,33,153,2483,True,3.2250000000000005e-05,0,8000,,False,,0,0,google,False
+eval-session-999,stream_end,ep_febc37c75e2d,2026-05-21T18:34:17.185210+00:00,google/gemini-3.1-flash-lite,,17,283,1821,True,5.745e-05,0,8000,,False,,0,0,google,False
+eval-session-999,stream_end,ep_3653506a6d36,2026-05-21T18:34:18.531210+00:00,google/gemini-3.1-flash-lite,,313,24,1343,True,2.0450000000000002e-05,0,8000,,False,,0,0,google,False
+eval-session-999,stream_end,ep_0990f04b4215,2026-05-21T18:34:21.099677+00:00,google/gemini-3.1-flash-lite,,334,569,2566,True,0.0001305,0,8000,,False,,0,0,google,False
+eval-session-999,stream_end,ep_5bde0b1212aa,2026-05-21T18:34:22.347483+00:00,google/gemini-3.1-flash-lite,,314,63,1246,True,2.83e-05,0,8000,,False,,0,0,google,False
+eval-session-999,stream_end,ep_3bd9186a0b6a,2026-05-21T18:34:25.125780+00:00,google/gemini-3.1-flash-lite,,317,552,2776,True,0.00012625,0,8000,,False,,0,0,google,False

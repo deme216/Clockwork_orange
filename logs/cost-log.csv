@@ -1,0 +1,3 @@
+timestamp,prompt,model,cost_usd,latency_ms
+2026-05-11T20:58:26.453103+00:00,A composite sword from shadow fight 2,~google/gemini-flash-latest,0.0004243000000000001,9205
+2026-05-11T21:06:35.506819+00:00,A light saber,~google/gemini-flash-latest,0.00070205,11820
