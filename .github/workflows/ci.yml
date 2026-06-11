@@ -1,4 +1,13 @@
-test-and-evaluate:
+name: VectorFlow CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-and-evaluate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -8,22 +17,12 @@ test-and-evaluate:
 
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: Start FastAPI Backend in Background
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          MCP_SECRET_KEY: "ci_test_secret"
-        run: |
-          # Start uvicorn in the background (&)
-          uvicorn main:app --host 0.0.0.0 --port 8000 &
-          # Wait for the /health endpoint to return 200 before continuing
-          timeout 60s bash -c 'until curl -s http://localhost:8000/health; do sleep 2; done'
 
       - name: Run golden set evaluation
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          APP_ENDPOINT: http://localhost:8000/api/v1/ai/stream
         run: |
           python eval/run_golden_set.py
 
@@ -31,19 +30,18 @@ test-and-evaluate:
         run: |
           python - << 'PYEOF'
           import json, os, sys
+          # Find the latest results file
           results_dir = "eval/results"
-          if not os.path.exists(results_dir):
-              print("ERROR: Results directory missing")
-              sys.exit(1)
           files = [os.path.join(results_dir, f) for f in os.listdir(results_dir) if f.endswith('.json')]
-          if not files:
-              print("ERROR: No results files found")
-              sys.exit(1)
           latest_file = max(files, key=os.path.getmtime)
+          
           with open(latest_file) as f:
               data = json.load(f)
+          
           score = data.get("score", 0)
           print(f"Golden Set Score: {score*100}%")
           if score < 0.70:
+              print("FAIL: Score below 70%")
               sys.exit(1)
+          print("PASS: Score meets threshold")
           PYEOF
