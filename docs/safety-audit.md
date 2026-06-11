@@ -57,12 +57,17 @@
 ---
 
 ## Area 5: Golden Test Set and Evaluation — [2/2 pts]
-**Link to most recent results:** [eval/results/results-20260521-223429.json](../eval/results/results-20260521-223429.json)
+**Link to results:** [eval/results/results-20260611-222626.json](../eval/results/results-20260611-222626.json)
 **Overall score:** 9/10
+**Run Time:** 25.22s (Requirement: < 3 minutes)
 
 ---
 
 ## Area 6: Data Governance Evidence — [2/2 pts]
-- **Cross-User Isolation:** Validated via `session_id`. `session_service.py` uses an in-memory dictionary keyed by UUID, ensuring User A cannot retrieve User B's design history.
-- **PII Protection:** The episode log uses a `prompt_hash` logic. The raw user request is never saved to persistent storage.
-- **API Key Security:** Confirmed via `git log --all --full-history -- .env` that no secrets have ever been committed to the repository.
+### Cross-User Isolation Test
+**Test Output:**
+
+Testing Isolation between 61fd0a7a-b8fc-4e5b-80b0-d1fc0cf3e1b6 and 628eb515-f4d8-494d-9388-8aeb557e5ee3
+✅ ISOLATION PASS: User B has no access to User A's history.
+
+**Data Map Link:** [docs/data-map.md](./data-map.md)
