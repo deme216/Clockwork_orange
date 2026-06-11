@@ -1,0 +1,47 @@
+name: VectorFlow CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-and-evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run golden set evaluation
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          python eval/run_golden_set.py
+
+      - name: Check score threshold
+        run: |
+          python - << 'PYEOF'
+          import json, os, sys
+          # Find the latest results file
+          results_dir = "eval/results"
+          files = [os.path.join(results_dir, f) for f in os.listdir(results_dir) if f.endswith('.json')]
+          latest_file = max(files, key=os.path.getmtime)
+          
+          with open(latest_file) as f:
+              data = json.load(f)
+          
+          score = data.get("score", 0)
+          print(f"Golden Set Score: {score*100}%")
+          if score < 0.70:
+              print("FAIL: Score below 70%")
+              sys.exit(1)
+          print("PASS: Score meets threshold")
+          PYEOF
