@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
@@ -20,9 +22,33 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Start FastAPI Backend
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # Set a dummy key for the MCP auth logic if needed
+          MCP_SECRET_KEY: "ci-test-secret"
+        run: |
+          # Start the server in the background (&)
+          uvicorn main:app --host 0.0.0.0 --port 8000 &
+          
+          # Wait for the /health endpoint to return 200 (max 30 seconds)
+          echo "Waiting for server to start..."
+          for i in {1..15}; do
+            if curl -s http://localhost:8000/health > /dev/null; then
+              echo "Server is UP!"
+              exit 0
+            fi
+            echo "Server not ready yet..."
+            sleep 2
+          done
+          echo "ERROR: Server failed to start in time"
+          exit 1
+
       - name: Run golden set evaluation
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # Ensure the script hits the internal CI server
+          APP_ENDPOINT: http://localhost:8000/api/v1/ai/stream
         run: |
           python eval/run_golden_set.py
 
@@ -30,9 +56,14 @@ jobs:
         run: |
           python - << 'PYEOF'
           import json, os, sys
-          # Find the latest results file
           results_dir = "eval/results"
+          if not os.path.exists(results_dir):
+              print("ERROR: Results directory missing")
+              sys.exit(1)
           files = [os.path.join(results_dir, f) for f in os.listdir(results_dir) if f.endswith('.json')]
+          if not files:
+              print("ERROR: No results files found")
+              sys.exit(1)
           latest_file = max(files, key=os.path.getmtime)
           
           with open(latest_file) as f:

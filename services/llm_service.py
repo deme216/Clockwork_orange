@@ -10,12 +10,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG_PATH = os.path.join(PROJECT_ROOT, "logs", "episode-log.csv")
 
 
-# 1. Dataclass for Lab 8 Audit requirements
 @dataclass
 class CallRecord:
     timestamp: str
@@ -29,10 +27,11 @@ class CallRecord:
     status: str = "ok"
 
 
-# 2. Production Fallback Chain
-MODEL_CHAIN = [
-    "google/gemini-2.0-flash-001",  # Primary
-    "anthropic/claude-3-haiku"  # Fallback 1
+# --- Lab 11 Configuration ---
+FALLBACK_CHAIN = [
+    os.getenv("PRIMARY_MODEL", "google/gemini-2.0-flash-001"),
+    os.getenv("SECONDARY_MODEL", "google/gemini-flash-latest"),
+    os.getenv("OSS_FALLBACK", "qwen/qwen-2.5-72b-instruct")
 ]
 
 MODEL_PRICING = {
@@ -40,6 +39,7 @@ MODEL_PRICING = {
     "google/gemini-2.0-flash-001": {"input": 0.10, "output": 0.40, "cache_read": 0.02},
     "google/gemini-3.1-flash-lite": {"input": 0.05, "output": 0.20, "cache_read": 0.01},
     "anthropic/claude-4.6-sonnet": {"input": 3.00, "output": 15.00, "cache_read": 0.30},
+    "google/gemini-flash-latest": {"input": 0.10, "output": 0.40, "cache_read": 0.02},
 }
 
 _client = OpenAI(
@@ -51,24 +51,21 @@ _client = OpenAI(
 def _log_to_csv(record: CallRecord):
     os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
     file_exists = os.path.isfile(LOG_PATH)
-    with open(LOG_PATH, "a", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=asdict(record).keys())
+    with open(LOG_PATH, "a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=asdict(record).keys(), quoting=csv.QUOTE_MINIMAL)
         if not file_exists:
             writer.writeheader()
         writer.writerow(asdict(record))
 
 
-# 3. Fixed call_ai signature to match callers
-def call_ai(prompt: str, system: str, model: str = None) -> dict:
-    # If a specific model is requested (like in run_asset_pipeline), use only that.
-    # Otherwise, use the fallback chain.
-    models_to_try = [model] if model else MODEL_CHAIN
+def call_ai(prompt: str, system: str, model: str | None = None) -> dict:
+    """Tries models in the fallback chain until one succeeds."""
+    chain = [model] if model else FALLBACK_CHAIN
     last_error = None
 
-    for i, model_name in enumerate(models_to_try):
-        start_time = time.time()
-        is_fallback = i > 0
-
+    for model_name in chain:
+        start_time = time.perf_counter()
+        is_fallback = model_name != chain[0]
         try:
             response = _client.chat.completions.create(
                 model=model_name,
@@ -76,13 +73,14 @@ def call_ai(prompt: str, system: str, model: str = None) -> dict:
                     {"role": "system", "content": system},
                     {"role": "user", "content": prompt}
                 ],
-                extra_headers={"X-Title": "VectorFlow Production"}
+                timeout=float(os.getenv("LLM_TIMEOUT_SECONDS", "30.0"))
             )
 
+            latency = int((time.perf_counter() - start_time) * 1000)
             usage = response.usage
-            latency = int((time.time() - start_time) * 1000)
             cache_read = getattr(usage, 'cache_read_input_tokens', 0)
 
+            # REAL COST CALCULATION (A5 Requirement)
             pricing = MODEL_PRICING.get(model_name, {"input": 0.15, "output": 0.60, "cache_read": 0.03})
             cost = ((usage.prompt_tokens - cache_read) / 1_000_000 * pricing["input"]) + \
                    (cache_read / 1_000_000 * pricing["cache_read"]) + \
@@ -99,18 +97,24 @@ def call_ai(prompt: str, system: str, model: str = None) -> dict:
             )
             _log_to_csv(record)
 
-            return {"content": response.choices[0].message.content, "cost": cost, "model": model_name}
+            return {
+                "content": response.choices[0].message.content,
+                "model_used": model_name,
+                "fallback_used": is_fallback,
+                "latency_ms": latency,
+                "cost_usd": cost
+            }
 
         except Exception as e:
+            print(f"[FALLBACK] {model_name} failed: {str(e)[:50]}")
             last_error = e
-            print(f"Model {model_name} failed. Trying next...")
             continue
 
-    raise Exception(f"All models failed. Last error: {last_error}")
+    raise RuntimeError(f"All models in fallback chain failed. Last error: {last_error}")
 
 
 def clean_svg(text: str) -> str:
-    match = re.search(r"(<svg.*?</svg>)", text, re.DOTALL)
+    match = re.search(r"(<svg.*?</svg>)", text, re.DOTALL | re.IGNORECASE)
     if match:
         text = match.group(1)
     text = text.replace("```xml", "").replace("```", "")
@@ -121,40 +125,32 @@ def clean_svg(text: str) -> str:
 def run_asset_pipeline(prompt: str, style: str, use_pro: bool) -> dict:
     start_time = time.time()
 
-    # 1. Creative Agent
-    creative_brief = call_ai(
-        model="google/gemini-3.1-flash-lite",
+    # 1. Creative Agent (UPDATED ARGUMENTS)
+    creative_result = call_ai(
+        prompt=f"Theme: {style}. Asset: {prompt}",
         system="You are a creative director. Describe a 2D game asset in 50 words.",
-        prompt=f"Theme: {style}. Asset: {prompt}"
+        model="google/gemini-3.1-flash-lite"
     )
+    brief = creative_result["content"]
 
-    # 2. Artist Agent (Removed the ~ from the model ID)
-    artist_model = "anthropic/claude-4.6-sonnet" if use_pro else "google/gemini-flash-latest"
-    raw_svg = call_ai(
-        model=artist_model,
+    # 2. Artist Agent (UPDATED ARGUMENTS & DYNAMIC MODEL)
+    artist_model = "anthropic/claude-4.6-sonnet" if use_pro else os.getenv("PRIMARY_MODEL")
+    artist_result = call_ai(
+        prompt=brief,
         system="You are a vector artist. Output ONLY raw SVG XML. No talk.",
-        prompt=creative_brief["content"]
+        model=artist_model
     )
 
     # 3. Clean SVG
-    final_svg = clean_svg(raw_svg["content"])
+    final_svg = clean_svg(artist_result["content"])
     total_latency = int((time.time() - start_time) * 1000)
-    total_cost = creative_brief["cost"] + raw_svg["cost"]
-
-    # 4. Corrected CallRecord Instantiation
-    record = CallRecord(
-        timestamp=datetime.now(timezone.utc).isoformat(),
-        prompt_hash=str(hash(prompt))[:10],  # Fixed: used prompt_hash instead of prompt
-        model=artist_model,
-        cost_usd=total_cost,
-        latency_ms=total_latency
-    )
-    _log_to_csv(record)
+    total_cost = creative_result["cost_usd"] + artist_result["cost_usd"]
 
     return {
         "svg": final_svg,
-        "brief": creative_brief["content"],
-        "model_used": artist_model,
+        "brief": brief,
+        "model_used": artist_result["model_used"],
+        "fallback_triggered": artist_result["fallback_used"],
         "latency_ms": total_latency,
         "cost_usd": total_cost
     }
