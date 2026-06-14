@@ -10,7 +10,7 @@
 ## Portfolio
 - [x] One-command setup documented in README.
 - [x] README includes overview, architecture, setup, and cost analysis.
-- [ ] 2-minute narrated demo video (In progress).
+- [x] 2-minute narrated demo video.
 - [x] Case study (2-3 pages) committed at docs/case-study.md.
 - [x] AGENTS.md added for AI coding assistance.
 - [x] Model selection decisions table in README.
